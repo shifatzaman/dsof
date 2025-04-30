@@ -13,7 +13,6 @@ events.*
 # *.pth
 *_pred
 *_true
-run_tuning.py
 optuna
 latex
 logs/*
@@ -23,5 +22,5 @@ config/model/backup
 src/models/backup
 tuning.py
 src/trainers/forward/backup
-run_time.py
 exps/*
+backup

@@ -8,7 +8,7 @@ import importlib
 import yaml
 from utils.misc import bcolors
 from utils.tools import DataLogger
-from data.data_loader import Dataset_Custom 
+from data.data_loader import DatasetCustom 
 from torch.utils.data import DataLoader
 
 class MergeArguments:
@@ -150,20 +150,13 @@ class LoadData:
             drop_last = False;
             batch_size = args.batch_size;
             freq = args.freq
-        elif flag == 'pred':
-            raise NotImplementedError('prediction data loader not implemented')
-            shuffle_flag = False;
-            drop_last = False;
-            batch_size = 1;
-            freq = args.detail_freq
-            # Data = dl.Dataset_Pred
         else:
             shuffle_flag = True;
             drop_last = True;
             batch_size = args.batch_size;
             freq = args.freq[-1:]
 
-        data_set = Dataset_Custom(
+        data_set = DatasetCustom(
             root_path=args.root_path,
             data= args.data,
             data_path=args.data_path,

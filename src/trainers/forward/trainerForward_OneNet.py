@@ -62,11 +62,8 @@ class TrainerForward(TrainerBaseForward):
             
             weight1_v2 = F.sigmoid(self.weight).view(1, 1, -1); weight1_v2 = weight1_v2.repeat(b, t, 1)
             inputs_decision = torch.cat([weight1_v2*y1, (1-weight1_v2)*y2, true_y], dim=1)
-            # inputs_decision = torch.cat([y1, y2, true_y], dim=1)
 
             self.bias = self.decision(inputs_decision)['pred']
-            # import ipdb; ipdb.set_trace()
-            # self.bias = self.decision(inputs_decision)
             bias = self.bias.view(b, 1, -1); bias = bias.repeat(1, t, 1)
             weight = self.weight.view(1, 1, -1); weight = weight.repeat(b, t, 1)
             weight1_v3 = F.sigmoid(weight + bias)
@@ -87,21 +84,7 @@ class TrainerForward(TrainerBaseForward):
         
         self.bias = self.bias.detach()
         
-        # import ipdb; ipdb.set_trace()
         
-        ################################### update weight ###################################
-        # if self.individual:
-        #     weight1_v4 = F.sigmoid(self.weight).view(1, 1, -1).repeat(b, t, 1)
-        # else:
-        #     weight1_v4 = F.sigmoid(self.weight)
-        
-        # loss_w = F.mse_loss(weight1_v4 * y1 + (1 - weight1_v4) * y2, true_y)
-        # loss_w.backward()        
-        # self.opt_w.step()
-        # self.opt_w.zero_grad()
-        
-        # import ipdb; ipdb.set_trace()
-        # return weight1_v3
     
     def feedforward_m(self, dataset_object, batch_x, batch_y, batch_x_mark, batch_y_mark, weight1):
 

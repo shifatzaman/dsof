@@ -33,11 +33,3 @@ class TrainerBaseForward:
     def update_ocp(self, prev, curr):
         return 
     
-    def extended_optimizer(self,):
-        return {
-            'train': [],
-            'test':{
-                'batch':[],
-                'online':[],
-            }
-        }
