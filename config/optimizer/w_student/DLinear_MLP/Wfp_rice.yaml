@@ -1,0 +1,11 @@
+opt_main:
+  train:
+    opt: adam
+    lr: 0.001
+    weight_decay: 0.0
+
+opt_student:
+  train:
+    opt: adam
+    lr: 0.001
+    weight_decay: 0.0
