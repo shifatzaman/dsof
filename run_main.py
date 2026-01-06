@@ -142,7 +142,7 @@ gpus = {
 }
 
 
-pred_lens = [48]
+pred_lens = [3, 6, 12]
 #### example pred_lens options
 # pred_lens = [6, 12, 24, 48, 96]
 
