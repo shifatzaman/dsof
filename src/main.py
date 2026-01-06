@@ -213,7 +213,7 @@ parser.add_argument('--test_run', action='store_true', default=False, help='test
 parser.add_argument('--resume', type=str, default=None, help='specify the model path and resume its training')
 
 # common dataset and dataloader settings
-parser.add_argument('--features', type=str, default='M', help='forecasting task, options:[M, S, MS]; M:multivariate predict multivariate, S:univariate predict univariate, MS:multivariate predict univariate')
+parser.add_argument('--features', type=str, default='S', help='forecasting task, options:[M, S, MS]; M:multivariate predict multivariate, S:univariate predict univariate, MS:multivariate predict univariate')
 parser.add_argument('--pred_len', type=int, default=1, help='prediction sequence length')
 parser.add_argument('--num_workers', type=int, default=0, help='data loader num workers')
 parser.add_argument('--inverse', action='store_true', help='inverse output data', default=False)
