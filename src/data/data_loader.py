@@ -103,6 +103,18 @@ class DatasetCustom(Dataset):
             ('Electricity', 'Exchange', 'ILI', 'Weather', 'WTH', 'Traffic'): {
                 'start': {'train': 0, 'val': int(self.len_df * 0.2), 'test': int(self.len_df * 0.25)},
                 'end': {'train': int(self.len_df * 0.2), 'val': int(self.len_df * 0.25), 'test': int(self.len_df)}
+            },
+            ('Wfp_rice',): {
+                'start': {
+                    'train': 0,
+                    'val': int(self.len_df * 0.6) - self.seq_len,
+                    'test': int(self.len_df * 0.8) - self.seq_len
+                },
+                'end': {
+                    'train': int(self.len_df * 0.6),
+                    'val': int(self.len_df * 0.8),
+                    'test': self.len_df
+                }
             }
         }
 

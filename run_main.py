@@ -138,6 +138,7 @@ gpus = {
     "Exchange": 4,
     "Weather": 4,
     "others": 4,
+    "Wfp_rice": 1
 }
 
 
@@ -151,7 +152,7 @@ itr = 1
 use_nohup = False
 
 datasets = [
-    "ETTh2",
+    "Wfp_rice",
 ]
 #### other dataset options
 # datasets =  ["Electricity", "ETTh1", "ETTh2", "Traffic", "Exchange", "Weather",]
