@@ -107,16 +107,16 @@ class DatasetCustom(Dataset):
             ('Wfp_rice',): {
                 'start': {
                     'train': 0,
-                    'val': int(self.len_df * 0.6) - self.seq_len,
-                    'test': int(self.len_df * 0.8) - self.seq_len
+                    'val': max(int(self.len_df * 0.7) - self.seq_len, 0),
+                    'test': max(int(self.len_df * 0.85) - self.seq_len, 0),
                 },
                 'end': {
-                    'train': int(self.len_df * 0.6),
-                    'val': int(self.len_df * 0.8),
-                    'test': self.len_df
+                    'train': int(self.len_df * 0.7),
+                    'val': int(self.len_df * 0.85),
+                    'test': self.len_df,
                 }
             }
-        }
+                    }
 
         borders = {}
         for keys, value in mapping.items():
