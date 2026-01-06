@@ -16,7 +16,6 @@ events.*
 optuna
 latex
 logs/*
-datasets/*
 config/trainer2
 config/model/backup
 src/models/backup
