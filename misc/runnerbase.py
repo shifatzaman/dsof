@@ -65,9 +65,7 @@ class Utility:
         return memory_free_values
     
     def gpumem_available(self, gpu_no, dataset, main_model, student_model):
-        student_cap = self.capacity[dataset][student_model] if student_model is not None else 0
-        
-        return self.estimated_free[gpu_no] > self.capacity[dataset][main_model] + student_cap
+        return True
     
     @staticmethod
     def get_gpu_names(gpu_distribution):
@@ -85,26 +83,7 @@ class Utility:
         return x.replace('/', '_')
     
     def allocate_gpu(self, gpu_to_use, dataset, main_model, student_model, gpus_default_dist):
-        if gpu_to_use is not None and self.gpumem_available(gpu_to_use, dataset, main_model, student_model): 
-            self.estimated_free[gpu_to_use] -= self.capacity[dataset][main_model]
-            
-            if student_model is not None:
-                self.estimated_free[gpu_to_use] -= self.capacity[dataset][student_model]
-                
-            print(f'gpu {gpu_to_use} is available; estimated free memory: {self.estimated_free[gpu_to_use]}')
-            return gpu_to_use
-        
-        for k in self.get_gpu_names(gpus_default_dist):
-            if self.gpumem_available(k, dataset, main_model, student_model):
-                self.estimated_free[k] -= self.capacity[dataset][main_model]
-                if student_model is not None:
-                    self.estimated_free[k] -= self.capacity[dataset][student_model]
-                print(f'gpu {k} is available; estimated free memory: {self.estimated_free[k]}')
-                return k
-            print(f'gpu {k} is not available; estimated free memory: {self.estimated_free[k]}')
-            
-        print('none of the gpus are available...')
-        return None
+        return 0
 
     @staticmethod
     def pid_gpu_cmd_mapping():
