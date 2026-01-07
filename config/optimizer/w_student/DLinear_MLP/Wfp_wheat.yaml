@@ -11,7 +11,7 @@ opt_main:
       amsgrad: false
     online:
       opt: adam
-      lr: 0.001
+      lr: 0.0005
       amsgrad: false
 
 opt_student:
@@ -27,5 +27,5 @@ opt_student:
       amsgrad: false
     online:
       opt: adam
-      lr: 0.001
+      lr: 0.0005
       amsgrad: false
