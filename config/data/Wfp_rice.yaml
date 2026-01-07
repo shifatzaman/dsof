@@ -2,7 +2,7 @@ freq: !!str 'm'
 test_bsz: !!int 1
 
 root_path: !!str './datasets/'
-data_path: !!str 'Wfp_rice.csv'
+data_path: !!str 'Wfp_wheat.csv'
 
 features: !!str 'S'
 target: !!str 'price'
