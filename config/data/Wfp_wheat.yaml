@@ -1,0 +1,25 @@
+freq: !!str 'm'
+test_bsz: !!int 1
+
+root_path: !!str './datasets/'
+data_path: !!str 'Wfp_wheat.csv'
+
+features: !!str 'S'
+target: !!str 'price'
+
+seq_len: !!int 24
+label_len: !!int 0
+pred_len: !!int 3   # this will get overridden by run_main’s pred_len loop anyway
+
+inverse: !!bool False
+cols: null
+
+num_workers: !!int 0
+batch_size: !!int 32
+
+enc_in:
+  S: !!int 1
+dec_in:
+  S: !!int 1
+c_out:
+  S: !!int 1
