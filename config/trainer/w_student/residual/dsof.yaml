@@ -5,7 +5,7 @@ discounted: 0.9
 er: true
 online_learning: full
 patience: 3
-seq_len: 96
+seq_len: 24
 td: true
 timeenc: 2
 train_epochs: 10
