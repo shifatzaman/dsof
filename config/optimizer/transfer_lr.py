@@ -3,7 +3,7 @@ import shutil
 
 def base(path= ''):
     return os.path.join(os.path.dirname(os.path.abspath(__file__)), path)
-datasets = ['Electricity', 'ETTh2', 'ETTm1', 'Traffic', 'Exchange',  'Weather', "Wfp_wheat"]
+datasets = ['Electricity', 'ETTh2', 'ETTm1', 'Traffic', 'Exchange',  'Weather', "Wfp_wheat", "Wfp_rice"]
 
 
 
