@@ -8,7 +8,7 @@ datasets = [
     "ETTm1",
     "Electricity",
     "ETTh2",
-    "Wfp_rice",
+    "Wfp_wheat",
 ]
 # models = [
 #     "NSTransformer",
