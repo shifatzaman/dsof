@@ -158,7 +158,7 @@ datasets = [
 #### other dataset options
 # datasets =  ["Electricity", "ETTh1", "ETTh2", "Traffic", "Exchange", "Weather",]
 
-main_model = "DLinear"
+main_model = "PatchTST"
 student_model = "MLP"
 opt = "w_student"
 trainer = "w_student/residual/dsof"

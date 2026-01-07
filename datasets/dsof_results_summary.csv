@@ -1,0 +1,13 @@
+Dataset,Model,Setting,Horizon,MAE,MSE
+Wfp_wheat,DLinear,wo_student,3,5.7,34.34
+Wfp_wheat,DLinear,wo_student,6,5.31,31.78
+Wfp_wheat,DLinear,wo_student,12,6.54,46.23
+Wfp_wheat,DLinear,w_student,3,5.16,28.26
+Wfp_wheat,DLinear,w_student,6,4.77,26.18
+Wfp_wheat,DLinear,w_student,12,6.25,44.11
+Wfp_rice,DLinear,wo_student,3,0.72,0.84
+Wfp_rice,DLinear,wo_student,6,0.79,0.84
+Wfp_rice,DLinear,wo_student,12,1.09,1.74
+Wfp_rice,DLinear,w_student,3,0.56,0.5
+Wfp_rice,DLinear,w_student,6,0.54,0.35
+Wfp_rice,DLinear,w_student,12,0.59,0.49
