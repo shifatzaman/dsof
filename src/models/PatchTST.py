@@ -5,8 +5,8 @@ from typing import  Optional
 from torch import nn
 from torch import Tensor
 
-from src.models.encoders.PatchTST_backbone import PatchTST_backbone
-from src.models.blocks.trendDecomposition import series_decomp
+from models.encoders.PatchTST_backbone import PatchTST_backbone
+from models.blocks.trendDecomposition import series_decomp
 
 
 class Model(nn.Module):

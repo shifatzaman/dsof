@@ -158,14 +158,14 @@ datasets = [
 #### other dataset options
 # datasets =  ["Electricity", "ETTh1", "ETTh2", "Traffic", "Exchange", "Weather",]
 
-main_model = "PatchTST"
+#main_model = "PatchTST"
 student_model = "MLP"
 opt = "w_student"
 trainer = "w_student/residual/dsof"
 
 
 ### other main_model options
-# main_models = ['DLinear', 'FITS', 'FSNet', 'iTransformer', 'NSTransformer', 'OneNet', 'PatchTST',  ]
+main_models = ['DLinear', 'PatchTST',  ]
 
 
 #### option combinations (group 1)
@@ -204,7 +204,7 @@ utility = Utility(process_threshold=12)
 
 # Initialize the MainCLI class with the specified parameters
 mainCLI = MainCLI(
-    main_model,
+    main_models,
     student_model,
     opt,
     trainer,

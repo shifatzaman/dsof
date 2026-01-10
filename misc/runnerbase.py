@@ -195,7 +195,8 @@ class BaseCLI:
             'comment': self.get_comment(main_model, student_model, trainer)
         }
         
-        haha = [get_sett(self.main_models, self.student_models, self.opts, self.trainers)]
+        # haha = [get_sett(self.main_models, self.student_models, self.opts, self.trainers)]
+        haha = []
                 
         # if self.mode == 'zip':
         #     for main_model, student_model, opt,  trainer in zip(self.main_models, self.student_models, 
@@ -204,12 +205,11 @@ class BaseCLI:
         #             haha.append(get_sett(main_model, student_model, opt, trainer))
         #     return haha
 
-        # for main_model in self.main_models:
-        #     for student_model in self.student_models:
-        #         for opt in self.opts:
-        #             for trainer in self.trainers:
-                            
-        #                 haha.append(get_sett(main_model, student_model, opt, trainer))
+        for main_model in self.main_models:
+            for student_model in self.student_models:
+                for opt in self.opts:
+                    for trainer in self.trainers:
+                        haha.append(get_sett(main_model, student_model, opt, trainer))
         return haha
     
     def get_comment(self, main_model, student_model, trainer):

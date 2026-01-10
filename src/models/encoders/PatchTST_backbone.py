@@ -9,9 +9,9 @@ import numpy as np
 from einops import rearrange
 #from collections import OrderedDict
 # from models.layers.PatchTST_layers import *
-from src.models.blocks.PatchTSTMha import MultiheadAttention
-from src.models.blocks.RevIN import RevIN
-from src.models.blocks.Encoding import positional_encoding
+from models.blocks.PatchTSTMha import MultiheadAttention
+from models.blocks.RevIN import RevIN
+from models.blocks.Encoding import positional_encoding
 # from models.ts2vec.ncca import TSEncoderTime, GlobalLocalMultiscaleTSEncoder
 # from models.ts2vec.fsnet import TSEncoder, GlobalLocalMultiscaleTSEncoder
 import importlib
